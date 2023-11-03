@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
+    <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "1072809-200.png" %>
             <span class="logo-span"> </span>
 
@@ -14,7 +14,7 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "Patients", "patients#index", style: "font-size: 1.3em;", class: "nav-link" %>
+            <%= link_to "Patients", patients_path, style: "font-size: 1.3em;", class: "nav-link" %>
           </li>
           <li class="nav-item">
             <%= link_to "Messages", "#", style: "font-size: 1.3em;", class: "nav-link" %>

@@ -3,10 +3,30 @@
   background: white;
 }
 
+.logo-span{
+  // font-family: 'Dancing Script', cursive;
+  font-size: 1.3em;
+  font-family: $headers-font;
+  color: $gray;
+
+  margin-top: 10px;
+  // font-family: 'Dancing Script', cursive;
+
+}
+
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 53px;
+}
+
+.avatar {
+  width: 49px;
+  border-radius: 50%;
+}
+.navbar {
+  --bs-navbar-padding-x: 0;
+  --bs-navbar-padding-y: 0rem;
 }

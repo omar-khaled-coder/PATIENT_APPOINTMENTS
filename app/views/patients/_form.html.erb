@@ -6,7 +6,7 @@
   <div class="form-inputs">
     <%= f.input :full_name %>
     <%= f.input :identification_number %>
-    <%= f.input :date_of_birth %>
+    <%= f.input :date_of_birth, start_year: Date.current.year - 100, end_year: Date.current.year - 10 %>
     <%= f.input :birth_place %>
     <%= f.input :gender %>
     <%= f.input :marital_status %>

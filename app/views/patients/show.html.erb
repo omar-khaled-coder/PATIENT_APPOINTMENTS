@@ -1,10 +1,105 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @patient %>
+<div class="patient-details">
+  <h1><%= @patient.full_name %></h1>
 
-<div>
-  <%= link_to "Edit this patient", edit_patient_path(@patient) %> |
+  <table>
+    <tr>
+      <td><strong>Identification Number:</strong></td>
+      <td><%= @patient.identification_number %></td>
+    </tr>
+    <tr>
+      <td><strong>Date of Birth:</strong></td>
+      <td><%= @patient.date_of_birth %></td>
+    </tr>
+    <tr>
+      <td><strong>Birth Place:</strong></td>
+      <td><%= @patient.birth_place %></td>
+    </tr>
+    <tr>
+      <td><strong>Gender:</strong></td>
+      <td><%= @patient.gender %></td>
+    </tr>
+    <tr>
+      <td><strong>Marital Status:</strong></td>
+      <td><%= @patient.marital_status %></td>
+    </tr>
+    <tr>
+      <td><strong>Country:</strong></td>
+      <td><%= @patient.country %></td>
+    </tr>
+    <tr>
+      <td><strong>Religion:</strong></td>
+      <td><%= @patient.religion %></td>
+    </tr>
+    <tr>
+      <td><strong>Work:</strong></td>
+      <td><%= @patient.work %></td>
+    </tr>
+    <tr>
+      <td><strong>Phone Number:</strong></td>
+      <td><%= @patient.phone_number %></td>
+    </tr>
+    <tr>
+      <td><strong>Email:</strong></td>
+      <td><%= @patient.email %></td>
+    </tr>
+    <tr>
+      <td><strong>Address:</strong></td>
+      <td><%= @patient.address %></td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <td><strong>Medical History:</strong></td>
+      <td><%= @patient.medical_history %></td>
+    </tr>
+    <tr>
+      <td><strong>Allergies:</strong></td>
+      <td><%= @patient.allergies %></td>
+    </tr>
+    <tr>
+      <td><strong>Current medications:</strong></td>
+      <td><%= @patient.current_medications %></td>
+    </tr>
+    <tr>
+      <td><strong>Known Medical Conditions:</strong></td>
+      <td><%= @patient.known_medical_conditions %></td>
+    </tr>
+    <tr>
+      <td><strong>Insurance Provider:</strong></td>
+      <td><%= @patient.insurance_provider %></td>
+    </tr>
+    <tr>
+      <td><strong>Policy Number:</strong></td>
+      <td><%= @patient.policy_number %></td>
+    </tr>
+    <tr>
+      <td><strong>Emergency Contact Number:</strong></td>
+      <td><%= @patient.emergency_contact_number %></td>
+    </tr>
+    <tr>
+      <td><strong>Emergency Name:</strong></td>
+      <td><%= @patient.emergency_name %></td>
+    </tr>
+    <tr>
+      <td><strong>Last Visit:</strong></td>
+      <td><%= @patient.last_visit %></td>
+    </tr>
+    <tr>
+      <td><strong>Payment Records:</strong></td>
+      <td><%= @patient.payment_records %></td>
+    </tr>
+    <!-- Add more patient details here -->
+  </table>
+
+  <!-- Add more patient details using the same structure -->
+</div>
+
+<div class="actions">
+  <%= link_to "Edit this patient", edit_patient_path(@patient) %>
+  |
   <%= link_to "Back to patients", patients_path %>
-
+  |
   <%= button_to "Destroy this patient", @patient, method: :delete %>
 </div>

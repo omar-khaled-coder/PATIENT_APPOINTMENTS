@@ -5,7 +5,6 @@
   |
   <%= link_to "Back to patients", patients_path %>
   |
-  <%= button_to "Destroy this patient", @patient, method: :delete %>
 </div>
 
 <div class="patientdetails">
@@ -101,4 +100,8 @@
 
   <!-- Add more patient details using the same structure -->
 </div>
+</div>
+
+<div class="actions">
+  <%= button_to "Destroy this patient", @patient, method: :delete %>
 </div>

@@ -1,0 +1,19 @@
+.patientdetails{
+  display: grid;
+  transition: cubic-bezier(.19,1,.22,1);
+  background-color: gold;
+  border: solid;
+  justify-content: space-around;
+  padding-top: 11px;
+  animation: ease-out;
+  border-radius: 15px;
+  margin: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 4px;
+  margin-bottom: 9px;
+  margin-left: 200px;
+  margin-right: 200px;
+}

@@ -1,6 +1,14 @@
 <p style="color: green"><%= notice %></p>
+<div>
+<div class="actions">
+  <%= link_to "Edit this patient", edit_patient_path(@patient) %>
+  |
+  <%= link_to "Back to patients", patients_path %>
+  |
+  <%= button_to "Destroy this patient", @patient, method: :delete %>
+</div>
 
-<div class="patient-details">
+<div class="patientdetails">
   <h1><%= @patient.full_name %></h1>
 
   <table>
@@ -48,8 +56,6 @@
       <td><strong>Address:</strong></td>
       <td><%= @patient.address %></td>
     </tr>
-  </table>
-  <table>
     <tr>
       <td><strong>Medical History:</strong></td>
       <td><%= @patient.medical_history %></td>
@@ -95,11 +101,4 @@
 
   <!-- Add more patient details using the same structure -->
 </div>
-
-<div class="actions">
-  <%= link_to "Edit this patient", edit_patient_path(@patient) %>
-  |
-  <%= link_to "Back to patients", patients_path %>
-  |
-  <%= button_to "Destroy this patient", @patient, method: :delete %>
 </div>

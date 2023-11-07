@@ -2,49 +2,44 @@
 
 <h1>Patients</h1>
 
-<%= link_to "New patient", new_patient_path %>
+<%= link_to "New patient", new_patient_path, class: "btn btn-primary" %>
 
 <div id="patients">
   <% @patients.each do |patient| %>
-
     <div class="patient-container">
+      <p>
+        <strong>Full name:</strong>
+        <%= patient.full_name %>
+      </p>
 
-          <p>
-          <strong>Full name:</strong>
-          <%= patient.full_name %>
-          </p>
+      <p>
+        <strong>Identification number:</strong>
+        <%= patient.identification_number %>
+      </p>
 
-          <p>
-            <strong>Identification number:</strong>
-            <%= patient.identification_number %>
-          </p>
+      <p>
+        <strong>Date of birth:</strong>
+        <%= patient.date_of_birth %>
+      </p>
 
-          <p>
-            <strong>Date of birth:</strong>
-            <%= patient.date_of_birth %>
-          </p>
+      <p>
+        <strong>Country:</strong>
+        <%= patient.country %>
+      </p>
 
-          <p>
-            <strong>Country:</strong>
-          <%= patient.country %>
-          </p>
+      <p>
+        <strong>Phone number:</strong>
+        <%= patient.phone_number %>
+      </p>
 
-          <p>
-          <strong>Phone number:</strong>
-          <%= patient.phone_number %>
-          </p>
+      <p>
+        <strong>Email:</strong>
+        <%= patient.email %>
+      </p>
 
-          <p>
-            <strong>Email:</strong>
-            <%= patient.email %>
-          </p>
-
-          <p>
-            <%= link_to "Show this patient", patient %>
-          </p>
-
+      <p>
+        <%= link_to "Show this patient", patient, class: "btn btn-primary" %>
+      </p>
     </div>
-
   <% end %>
-
 </div>

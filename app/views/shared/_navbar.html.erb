@@ -1,8 +1,11 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+
   <div class="container-fluid">
+
     <%= link_to root_path, class: "navbar-brand" do %>
+
       <%= image_tag "1072809-200.png" %>
-            <span class="logo-span"> </span>
+      <span class="logo-span"> </span>
 
     <% end %>
 
@@ -11,9 +14,9 @@
     </button>
 
     <div class="container-fluid">
-      <%= form_tag(search_results_path, method: :get, class: "d-flex", role: "search") do %>
+      <%= form_tag(search_results_path, method: :get, class: "d-flex", style:"float: right;width: 40%;padding-right: 20px;", role: "search") do %>
         <%= text_field_tag :search_query, params[:search_query], class: "form-control me-2", placeholder: "Search", aria_label: "Search" %>
-        <%= button_tag type: :submit, class: "btn btn-light", style: "color: #c00; cursor: pointer;" do %>
+        <%= button_tag type: :submit, class: "btn btn-dark", style: "color: #ffd700; cursor: pointer;" do %>
           Search
         <% end %>
       <% end %>

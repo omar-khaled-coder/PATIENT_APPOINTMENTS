@@ -1,40 +1,50 @@
 <p style="color: green"><%= notice %></p>
 
-<h2 style="text-align: center;">Patients</h2>
+<div class="container px-10">
 
-<div style="margin-left: 10px;">
+  <h2 style="text-align: center;">Patients</h2>
 
-  <%= link_to "New patient", new_patient_path, class: "btn btn-primary" %>
+  <div style="margin-left: 10px;">
 
-</div>
+    <%= link_to "New patient", new_patient_path, class: "btn btn-primary" %>
 
-<div id="patients">
-  <% @patients.each do |patient| %>
-    <div class="patient-container">
-      <div>
-        <strong>Full name:</strong>
-        <%= patient.full_name %>
+  </div>
+
+  <div id="patients" claas="gx-5 gy-5 d-flex px-4">
+
+    <% @patients.each do |patient| %>
+
+      <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 patient-container">
+
+        <div>
+          <strong>Full name:</strong>
+          <%= patient.full_name %>
+        </div>
+
+        <div>
+          <strong>ID</strong>
+          <%= patient.identification_number %>
+        </div>
+
+
+        <div>
+          <strong>Country:</strong>
+          <%= patient.country %>
+        </div>
+
+        <div>
+          <strong>Phone number:</strong>
+          <%= patient.phone_number %>
+        </div>
+
+        <div>
+          <%= link_to "Show this patient", patient, class: "btn btn-primary", style: "padding-bottom: 0px;padding-top: 0px;" %>
+        </div>
+
       </div>
 
-      <div>
-        <strong>ID</strong>
-        <%= patient.identification_number %>
-      </div>
+    <% end %>
 
+  </div>
 
-      <div>
-        <strong>Country:</strong>
-        <%= patient.country %>
-      </div>
-
-      <div>
-        <strong>Phone number:</strong>
-        <%= patient.phone_number %>
-      </div>
-
-      <div>
-        <%= link_to "Show this patient", patient, class: "btn btn-primary", style: "padding-bottom: 0px;padding-top: 0px;" %>
-      </div>
-    </div>
-  <% end %>
 </div>

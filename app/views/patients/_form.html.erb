@@ -1,34 +1,40 @@
-
-<%= simple_form_for(@patient) do |f| %>
+<%= simple_form_for(@patient, html: { class: 'custom-form' }) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= f.input :full_name %>
-    <%= f.input :identification_number %>
-    <%= f.input :date_of_birth, start_year: Date.current.year - 100, end_year: Date.current.year - 10 %>
-    <%= f.input :birth_place %>
-    <%= f.input :gender %>
-    <%= f.input :marital_status %>
-    <%= f.input :country %>
-    <%= f.input :religion %>
-    <%= f.input :work %>
-    <%= f.input :phone_number %>
-    <%= f.input :email %>
-    <%= f.input :address %>
-    <%= f.input :medical_history %>
-    <%= f.input :allergies %>
-    <%= f.input :current_medications %>
-    <%= f.input :known_medical_conditions %>
-    <%= f.input :insurance_provider %>
-    <%= f.input :policy_number %>
-    <%= f.input :emergency_contact_number %>
-    <%= f.input :emergency_name %>
-    <%= f.input :last_visit %>
-    <%= f.input :payment_records %>
+    <div class="row" style="margin: 1px;">
+      <div class="col-md-6">
+        <%= f.input :full_name, label: 'Full Name', input_html: { class: 'form-control' } %>
+        <%= f.input :identification_number, label: 'Identification Number', input_html: { class: 'form-control' } %>
+        <%= f.input :date_of_birth, label: 'Date of Birth', start_year: Date.current.year - 100, end_year: Date.current.year - 10, input_html: { class: 'form-control' } %>
+        <%= f.input :birth_place, label: 'Birth Place', input_html: { class: 'form-control' } %>
+        <%= f.input :gender, label: 'Gender', input_html: { class: 'form-control' } %>
+        <%= f.input :marital_status, label: 'Marital Status', input_html: { class: 'form-control' } %>
+        <%= f.input :country, label: 'Country', input_html: { class: 'form-control' } %>
+        <%= f.input :religion, label: 'Religion', input_html: { class: 'form-control' } %>
+        <%= f.input :work, label: 'Work', input_html: { class: 'form-control' } %>
+        <%= f.input :phone_number, label: 'Phone Number', input_html: { class: 'form-control' } %>
+        <%= f.input :email, label: 'Email', input_html: { class: 'form-control' } %>
+      </div>
+      <div class="col-md-6">
+
+        <%= f.input :address, label: 'Address', input_html: { class: 'form-control' } %>
+        <%= f.input :medical_history, label: 'Medical History', input_html: { class: 'form-control' } %>
+        <%= f.input :allergies, label: 'Allergies', input_html: { class: 'form-control' } %>
+        <%= f.input :current_medications, label: 'Current Medications', input_html: { class: 'form-control' } %>
+        <%= f.input :known_medical_conditions, label: 'Known Medical Conditions', input_html: { class: 'form-control' } %>
+        <%= f.input :insurance_provider, label: 'Insurance Provider', input_html: { class: 'form-control' } %>
+        <%= f.input :policy_number, label: 'Policy Number', input_html: { class: 'form-control' } %>
+        <%= f.input :emergency_contact_number, label: 'Emergency Contact Number', input_html: { class: 'form-control' } %>
+        <%= f.input :emergency_name, label: 'Emergency Name', input_html: { class: 'form-control' } %>
+        <%= f.input :last_visit, label: 'Last Visit', input_html: { class: 'form-control' } %>
+        <%= f.input :payment_records, label: 'Payment Records', input_html: { class: 'form-control' } %>
+      </div>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-actions text-center">
+    <%= f.button :submit, class: 'btn btn-primary' %>
   </div>
 <% end %>

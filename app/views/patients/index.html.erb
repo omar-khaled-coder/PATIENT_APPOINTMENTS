@@ -7,20 +7,16 @@
 <div id="patients">
   <% @patients.each do |patient| %>
     <div class="patient-container">
-      <p>
+      <div>
         <strong>Full name:</strong>
         <%= patient.full_name %>
-      </p>
+      </div>
 
       <p>
         <strong>Identification number:</strong>
         <%= patient.identification_number %>
       </p>
 
-      <p>
-        <strong>Date of birth:</strong>
-        <%= patient.date_of_birth %>
-      </p>
 
       <p>
         <strong>Country:</strong>
@@ -30,11 +26,6 @@
       <p>
         <strong>Phone number:</strong>
         <%= patient.phone_number %>
-      </p>
-
-      <p>
-        <strong>Email:</strong>
-        <%= patient.email %>
       </p>
 
       <p>

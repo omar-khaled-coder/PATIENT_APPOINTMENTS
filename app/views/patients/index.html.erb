@@ -1,9 +1,13 @@
 <p style="color: green"><%= notice %></p>
 
 <h2 style="text-align: center;">Patients</h2>
+
 <div style="margin-left: 10px;">
-<%= link_to "New patient", new_patient_path, class: "btn btn-primary" %>
+
+  <%= link_to "New patient", new_patient_path, class: "btn btn-primary" %>
+
 </div>
+
 <div id="patients">
   <% @patients.each do |patient| %>
     <div class="patient-container">

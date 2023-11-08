@@ -1,11 +1,18 @@
 class PatientsController < ApplicationController
   before_action :set_patient, only: %i[ show edit update destroy ]
 
+
+
   # GET /patients or /patients.json
   def index
     @patients = Patient.all
   end
 
+  def search_results
+    search_query = params[:search_query]
+    puts "Search Query: #{search_query}" # Check the value in the console
+    @search_results = Patient.where("full_name ILIKE ?", "%#{search_query}%")
+  end
   # GET /patients/1 or /patients/1.json
   def show
   end

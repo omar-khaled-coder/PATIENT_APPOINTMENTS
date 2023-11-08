@@ -1,0 +1,48 @@
+<div class="container">
+  <% if @search_results.present? %>
+
+    <div class="row ">
+
+      <% @search_results.each do |patient| %>
+
+
+          <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 patient-container">
+            <div>
+              <strong>Full name:</strong>
+              <%= patient.full_name %>
+            </div>
+
+            <div>
+              <strong>ID</strong>
+              <%= patient.identification_number %>
+            </div>
+
+
+            <div>
+              <strong>Country:</strong>
+              <%= patient.country %>
+            </div>
+
+            <div>
+              <strong>Phone number:</strong>
+              <%= patient.phone_number %>
+            </div>
+
+            <div>
+              <%= link_to "Show this patient", patient, class: "btn btn-primary", style: "padding-bottom: 0px;padding-top: 0px;" %>
+            </div>
+
+          </div>
+
+
+      <% end %>
+
+    </div>
+
+  <% else %>
+
+    <p>No results found for your search query.</p>
+
+  <% end %>
+
+</div>

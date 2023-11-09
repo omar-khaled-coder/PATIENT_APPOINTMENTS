@@ -1,10 +1,10 @@
 <p style="color: green"><%= notice %></p>
 <div>
-<div class="actions">
-  <%= link_to "Edit this patient", edit_patient_path(@patient) %>
+<div class="actions" style="padding-left: 10px;">
+  <%= link_to "Edit this patient", edit_patient_path(@patient), class: "btn btn-primary" %>
   |
-  <%= link_to "Back to patients", patients_path %>
-  |
+  <%= link_to "Back to patients", patients_path, class: "btn btn-primary" %>
+
 </div>
 
 <div class="patientdetails">
@@ -102,6 +102,6 @@
 </div>
 </div>
 
-<div class="actions">
-  <%= link_to "Delete this patient", @patient, method: :delete, data: { confirm: 'Are you sure you want to delete this patient?' } %>
+<div class="actions" style="display: grid;text-align: center;">
+  <%= button_to "Delete this patient", @patient, method: :delete, data: { confirm: 'Are you sure you want to delete this patient?' } %>
 </div>

@@ -3,7 +3,3 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import "@popperjs/core"
 import "bootstrap"
-// application.js
-import Rails from "@rails/ujs";
-Rails.start();
-//= require rails-ujs
